@@ -4,4 +4,3 @@ CREATE TABLE IF NOT EXISTS contributions (
 	time TIMESTAMP NOT NULL,
 	amount INTEGER NOT NULL
 );
--- Your SQL goes here

@@ -6,3 +6,9 @@ edition = "2024"
 [dependencies]
 axum = "0.8.4"
 diesel = { version = "2.2.12", features = ["postgres"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
