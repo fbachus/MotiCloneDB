@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS workouts (
+	id SERIAL PRIMARY KEY,
+	user_id INTEGER REFERENCES users (id) ON DELETE CASCADE,
+	proof_path INTEGER REFERENCES messages (id) ON DELETE CASCADE,
+	verified BOOLEAN,
+	CHECK user_id NOT NULL,
+	CHECK proof_path NOT NULL
+);

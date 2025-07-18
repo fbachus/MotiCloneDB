@@ -14,21 +14,21 @@ CREATE TABLE IF NOT EXISTS groups (
 	challenge_deadline timestamp
 );
 
-CREATE TABLE IF NOT EXISTS commitment (
+CREATE TABLE IF NOT EXISTS commitments (
 	id SERIAL PRIMARY KEY,
 	user_id integer REFERENCES users (id) ON DELETE CASCADE,
 	groups_id integer REFERENCES groups (id) ON DELETE CASCADE,
 	amount integer
 );
 
-CREATE TABLE IF NOT EXISTS pool (
+CREATE TABLE IF NOT EXISTS pools (
 	id SERIAL PRIMARY KEY,
 	manager integer REFERENCES users (id) ON DELETE RESTRICT,
 	purpose varchar(255),
 	amount integer NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS contribution (
+CREATE TABLE IF NOT EXISTS contributions (
 	id SERIAL PRIMARY KEY,
 	commitment integer REFERENCES commitment (id) ON DELETE RESTRICT,
 	time timestamp NOT NULL,
