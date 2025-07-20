@@ -3,14 +3,6 @@
 version = 4
 
 [[package]]
-name = "MotiCloneDB"
-version = "0.1.0"
-dependencies = [
- "axum",
- "diesel",
-]
-
-[[package]]
 name = "addr2line"
 version = "0.24.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -420,6 +412,14 @@ dependencies = [
  "libc",
  "wasi",
  "windows-sys 0.59.0",
+]
+
+[[package]]
+name = "moti_clone_db"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "diesel",
 ]
 
 [[package]]
