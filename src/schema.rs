@@ -33,11 +33,11 @@ diesel::table! {
 diesel::table! {
     messages (id) {
         id -> Int4,
-        author_id -> Nullable<Int4>,
-        groups_id -> Nullable<Int4>,
+        author_id -> Int4,
+        groups_id -> Int4,
         content -> Text,
         time -> Timestamp,
-        proof -> Nullable<Bool>,
+        proof -> Bool,
     }
 }
 
