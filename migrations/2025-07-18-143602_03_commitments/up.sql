@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS commitments (
-	id SERIAL PRIMARY KEY,
-	user_id INTEGER REFERENCES users (id) ON DELETE CASCADE,
-	groups_id INTEGER REFERENCES groups (id) ON DELETE CASCADE,
-	amount INTEGER
-);
-
