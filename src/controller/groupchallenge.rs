@@ -12,7 +12,7 @@ pub fn create_groupchallenge(
     description: &str,
     start_date: chrono::NaiveDate,
     end_date: chrono::NaiveDate,
-) -> Result<(()), ControllerError> {
+) -> Result<(), ControllerError> {
     check_user_is_group_admin(conn, group_id, user_id)?;
     let now = std::time::SystemTime::now();
     let new_group_challenge = groupchallenge_model::NewGroupChallenge {
