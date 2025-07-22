@@ -48,8 +48,8 @@ diesel::table! {
 diesel::table! {
     Reaction (id) {
         id -> Int4,
-        user_id -> Nullable<Int4>,
-        message_id -> Nullable<Int4>,
+        user_id -> Int4,
+        message_id -> Int4,
         #[max_length = 8]
         emoji -> Varchar,
     }
