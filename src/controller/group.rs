@@ -14,7 +14,9 @@ pub fn create_group(conn: &mut PgConnection, user: i32, name: &str) -> Result<()
         .execute(conn)?;
     Ok(())
 }
-fn check_user_is_group_admin(
+
+// TODO: use groupmember_id instead of user_id
+pub fn check_user_is_group_admin(
     conn: &mut PgConnection,
     group_id: i32,
     user: i32,
