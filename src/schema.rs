@@ -64,7 +64,9 @@ diesel::table! {
         email -> Varchar,
         #[max_length = 82]
         password -> Varchar,
-        weekly_workout_goal -> Nullable<Int4>,
+        #[max_length = 50]
+        salt -> Varchar,
+        weekly_workout_goal -> Int4,
     }
 }
 

@@ -4,8 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+argon_hash_password = "0.1.2"
 axum = "0.8.4"
 diesel = { version = "2.2.12", features = ["postgres"] }
+dotenvy = { version = "0.15" }
+thiserror = "2.0.12"
 
 [profile.dev]
 opt-level = 1
