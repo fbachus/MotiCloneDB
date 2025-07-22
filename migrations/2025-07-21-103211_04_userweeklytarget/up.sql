@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "UserWeeklyTarget" (
-	target_id SERIAL PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	user_id INTEGER NOT NULL REFERENCES "User" (id) ON DELETE CASCADE,
 	groupchallenge_id INTEGER REFERENCES "GroupChallenge" (
 		challenge_id

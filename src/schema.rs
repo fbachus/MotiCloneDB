@@ -71,8 +71,8 @@ diesel::table! {
 }
 
 diesel::table! {
-    UserWeeklyTarget (target_id) {
-        target_id -> Int4,
+    UserWeeklyTarget (id) {
+        id -> Int4,
         user_id -> Int4,
         groupchallenge_id -> Nullable<Int4>,
         target_count -> Int4,
