@@ -1,10 +1,19 @@
-# What this project this
+# What this project is
 
 This repository is a practical implementation of the motimate projects database
 and backend layer, but in rust with respective frameworks.
 As such this was done mostly as an exercise in learning an ORM for rust and
 seeing how far and fast I can go in a language I personally feel more
 comfortable with.
+
+## What this project is not (yet)
+
+This repository does not contain a working backend to interact with the
+database as of now, as the focus was very much on the data layer and
+implementing the connection to any backend via Model and Controller components
+according to the MVC model.
+It is lacking the view component to access that data and that functionality via
+non-code pathways.
 
 # Getting started
 
