@@ -38,7 +38,7 @@ diesel::table! {
     Message (id) {
         id -> Int4,
         author_id -> Nullable<Int4>,
-        groups_id -> Nullable<Int4>,
+        group_id -> Nullable<Int4>,
         content -> Text,
         time -> Timestamp,
         proof -> Bool,
@@ -87,7 +87,7 @@ diesel::joinable!(Group -> User (admin));
 diesel::joinable!(GroupChallenge -> Group (group_id));
 diesel::joinable!(GroupMember -> Group (group_id));
 diesel::joinable!(GroupMember -> User (user_id));
-diesel::joinable!(Message -> Group (groups_id));
+diesel::joinable!(Message -> Group (group_id));
 diesel::joinable!(Message -> User (author_id));
 diesel::joinable!(Reaction -> Message (message_id));
 diesel::joinable!(Reaction -> User (user_id));
